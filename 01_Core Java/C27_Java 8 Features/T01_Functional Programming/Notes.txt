@@ -1,0 +1,70 @@
+# What we will learn in this playlist?
+- Stream
+- Method references
+- Constructor references
+- Functional interfaces
+- Consumer, Predicate, Function, Supplier and their BiTypes (Except Supplier)
+- Primitive functional interfaces
+- Lambda expressions
+- Anonymous inner class
+
+# What are the benefits of functional programming?
+- We are not going to do something that is not possible in OOP
+- Clean and readable code
+- Reduces the probability of making errors
+- Remove boiler plate code
+- Less code
+- Help us to implement parallel programming
+
+# What is anonymous inner class?
+- A class which is inside another class and has no name
+- Compiler creates <class_name>$1.class file to store the class information
+
+# When to use anonymous inner class?
+- Anonymous inner classes are used to implement the unimplemented methods of an interface without explicitly creating a class (reducing unnecessary code)
+
+# Lambda Expressions
+- It forms the basis for functional programming
+- New operator is introduced -> (lambda operator)
+
+# Conditions for Lambda Expressions
+- Method return type should match
+- Parameters to the method should match
+- Interface should have only one abstract or unimplemented method
+
+# Functional interface
+- Interface with only one abstract or unimplemented method
+- From Java 8 - Interface can have any number of default or static methods but it should contain only one abstract method to be called as Functional Interface
+- Using functional interface annotation
+
+# Write a lambda expression for all the following combinations
+- Method accepts one parameter and does not return anything
+- Method accepts two parameters and does not return anything
+- Method does not accept any parameter but returns something
+- Method accepts one parameter and returns something
+- Method accepts one parameter and returns a boolean
+
+# Understanding the irrelevancy of the method name in functional interface
+- Method name has nothing to do with functional interface implementation, method name can be anything but a meaningful name is always preferable
+
+# What is the problem with creating our own functional interfaces?
+- We cannot go on creating multiple interfaces having different functions which accepts different number or different type of arguments - even returning different type of values, Java has provided some inbuilt interfaces to solve this problem.
+- In-built functional interfaces to the rescue
+- Using generics to solve the issue
+- Consumer, Supplier, Function and Predicate (Some important Functional Interfaces)
+- These interfaces are present in java.util.function package
+
+# Overview of important in-built functional Interfaces
+- In total there are 43 functional interfaces, important ones are:
+- Consumer<T> : Represents an operation that accepts a single input argument and returns no result
+- BiConsumer<T,U> : Represents an operation that accepts two input arguments and returns no result
+- Function<T,R> : Represents a function that accepts one argument and produces a result
+- BiFunction<T,U,R> : Represents a function that accepts two arguments and produces a result
+- Predicate<T> : Represents a predicate (boolean-valued function) of one argument
+- BiPredicate<T,U> : Represents a predicate (boolean-valued function) of two arguments
+- Supplier<T> : Represents a supplier of results
+
+# Passing lambdas as method parameters
+- Everything in Java belongs to an object or a class. An entity cannot exist on its own or in isolation [Before Java 1.8]
+- We pass object that contains a behavior to perform a task
+- From Java 8, we can pass behavior itself to a method as a parameter (e.g. L10_PassLambdaAsAMethodParam, L11_PassLambdaAsAMethodParamUsage)
